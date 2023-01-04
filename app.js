@@ -12,18 +12,29 @@ function jump(){
 }
 // Hit detect
 let checkDead = setInterval(function() {
-    var blockManTop =
+    let blockManTop =
     //parseint to get just int(number)
     parseInt(window.getComputedStyle(blockMan).getPropertyValue('top'));
-    var blockleft =
+    let blockleft =
     //parseint to get just int(number)
     parseInt(window.getComputedStyle(block).getPropertyValue('left'));
-    if(blockleft <20 && blockleft >0 && blockManTop >= 574){
+    if(blockleft < blockManTop && blockleft == 196 && blockManTop == 575){
         block.style.animation = "none";
         block.style.display = "none";
+        console.log(blockManTop, blockleft);
 
         alert("you lose")
 
+    } else if (blockleft > blockMan && blockleft == 100 && blockManTop <= 575){
+       console.log(blockManTop, blockleft)
+
+        const when = setTimeout(function() {
+            alert("win")
+            
+        
+            
+        }, 1000); clearTimeout(when)
+        
     }
 
-}, 10);
+},10);
