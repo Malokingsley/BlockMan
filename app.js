@@ -1,7 +1,9 @@
 let blockMan = document.getElementById('blockMan');
 let block = document.getElementById('block');
-let hitSound = new Audio('Audio/explosion.wav')
-let jumpSound = new Audio('Audio/jump.wav')
+ const blockMoveSound = new Audio('Audio/blockmoves.wav')
+const hitSound = new Audio('Audio/explosion.wav')
+const jumpSound = new Audio('Audio/jump.wav')
+const loseSound = new Audio('Audio/you-lose.wav')
 function jump(){
     if(blockMan.classList != "animate"){ 
         jumpSound.play()
@@ -11,7 +13,7 @@ function jump(){
     setTimeout(function(){
         blockMan.classList.remove("animate");
         
-    }, 500);
+    }, 450);
 }
 
 // Hit detect
@@ -20,42 +22,45 @@ let checkDead = setInterval(function() {
     let blockManTop =
     parseInt(window.getComputedStyle(blockMan).getPropertyValue('top'));
     //parseint to get just int(number)
-    let blockleft =
+    let blockLeft =
     parseInt(window.getComputedStyle(block).getPropertyValue('left'));
     //parseint to get just int(number)
     let blockManRight =
     parseInt(window.getComputedStyle(blockMan).getPropertyValue('right'));
     
     
-    if(blockleft < blockManTop && blockleft == 205 && blockManTop == 575 && blockManRight >= 200 && blockleft != 200){
+    if(blockLeft < blockManTop && blockLeft == 205 && blockManTop == 575 && blockManRight >= 200 && blockLeft != 200){
         // if the block.x is less then blockman.right??
         block.style.animation = "none";
         block.style.display = "none";
-         console.log("Top" + blockManTop,"Right" + blockManRight,"block Left" + blockleft);
+        //console.log("Top" + blockManTop,"Right" + blockManRight,"block Left" + blockLeft);
         
         hitSound.play()
-        alert ( "you lose")
+    
+        alert ("you lose")
         
-    } else if (blockleft <= 50 && blockManTop >= 40){
+    } else if (blockLeft <= 0 && blockManTop != 200) {
+        
+        // console.log(blockManTop, blockLeft)
+        //alert('you win')
+        
+        
+    }
     
-      // console.log(blockManTop, blockleft)
-       alert('you win')
+function blockMoves(){
+        if (blockLeft != blockManRight && blockLeft <= blockManTop){
 
-       
-
-
-        {
-
-            
-           
+            blockMoveSound.play()
+        }
+        
+    };
+    //addEventListener()
+    blockMoves()
     
 
-}
 
 
 
-
-
-}},1);
+},1);
 
 

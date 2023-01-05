@@ -55,3 +55,17 @@ animation: jump 450ms;
   
 }
 
+#unmute{
+border-color: goldenrod;
+position: fixed;
+left: 1200px;
+top: 65px;
+width: 80px;
+height: 40px;
+border-radius: 360%;
+font-size: larger;
+color: red;
+
+
+}
+
