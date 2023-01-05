@@ -28,9 +28,10 @@ h1 {
   position: relative;
   top: 575px;
   left: 200px;
+  right: 200px;
 }
 .animate{
-animation: jump 500ms;
+animation: jump 450ms;
 }
 @keyframes jump {
   0%{top:150px;}
