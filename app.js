@@ -1,10 +1,10 @@
 let blockMan = document.getElementById('blockMan');
-let block = document.getElementById('block');
-
-
+let block = document.getElementById('block')
 function jump(){
     if(blockMan.classList != "animate"){ 
-
+        let mySound = new Audio('Audio/jump.wav')
+        mySound.play()
+        
     }
     blockMan.classList.add("animate");
     setTimeout(function(){
@@ -14,6 +14,7 @@ function jump(){
 }
 
 // Hit detect
+
 let checkDead = setInterval(function() {
     let blockManTop =
     //parseint to get just int(number)
@@ -25,20 +26,27 @@ let checkDead = setInterval(function() {
         // if the block.x is less then blockman.right??
         block.style.animation = "none";
         block.style.display = "none";
-        console.log(blockManTop, blockleft);
+       // console.log(blockManTop, blockleft);
 
         alert("you lose")
 
-    } else if (blockleft < 50 && blockManTop >= 40){
+    } else if (blockleft <= 50 && blockManTop >= 40){
     
-       console.log(blockManTop, blockleft)
+      // console.log(blockManTop, blockleft)
        alert('you win')
+
+       
 
 
         {
+
+            
            
     
 
-}}},1);
+}
+
+
+}},10);
 
 
