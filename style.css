@@ -1,12 +1,25 @@
 Html {
   padding: 0;
   margin: 0;
+  background-color: black;
+}
+h1 {
+  color: red;
+  display:flex;
+  justify-content: center;
+  align-self: center;
+  font-size: 60px;
+  border: 10px;
+  border-color: black;
+
+
 }
 #game{
   width: 1600px;
   height: 600px;
-  border: 40px solid black;
+  border: 40px solid goldenrod;
   border-radius: 20.5%;
+  background-image: linear-gradient(black,silver);
 }
 #blockMan{
   width: 20px;
@@ -24,6 +37,7 @@ animation: jump 500ms;
   10%{top:100px;}
   50%{top:100px;}
   
+  
 }
 #block{
   width: 15px;
@@ -32,7 +46,7 @@ animation: jump 500ms;
   position: relative;
   top: 560px;
   left: 1300px;
-  animation: block 5s infinite linear;
+  animation: block 3s infinite linear;
 }
 @keyframes block {
   0% {left:1300px;}

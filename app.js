@@ -1,5 +1,7 @@
 let blockMan = document.getElementById('blockMan');
 let block = document.getElementById('block');
+
+
 function jump(){
     if(blockMan.classList != "animate"){ 
 
@@ -10,6 +12,7 @@ function jump(){
         
     }, 500);
 }
+
 // Hit detect
 let checkDead = setInterval(function() {
     let blockManTop =
@@ -18,27 +21,24 @@ let checkDead = setInterval(function() {
     let blockleft =
     //parseint to get just int(number)
     parseInt(window.getComputedStyle(block).getPropertyValue('left'));
-    console.log(`here is block left ${blockleft}`)
-    if(blockleft < blockManTop && blockleft == 205 && blockManTop == 575){
-        // if  the blockright.x is less then blockman.left??
+    if(blockleft < blockManTop && blockleft == 205 ){
+        // if the block.x is less then blockman.right??
         block.style.animation = "none";
         block.style.display = "none";
         console.log(blockManTop, blockleft);
 
         alert("you lose")
 
-    } else if (blockleft < 50 ){
+    } else if (blockleft < 50 && blockManTop >= 40){
+    
        console.log(blockManTop, blockleft)
        alert('you win')
 
-        // const when = setTimeout(function()// 
+
         {
            
-            
-        
-            
-       // }, 1000); clearTimeout(when)
-        
-  //  }
+    
 
-}}},10);
+}}},1);
+
+
