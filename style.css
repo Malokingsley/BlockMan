@@ -29,9 +29,10 @@ h1 {
   top: 575px;
   left: 200px;
   right: 200px;
+  bottom: 120px; 
 }
 .animate{
-animation: jump 450ms;
+animation: jump 500ms;
 }
 @keyframes jump {
   0%{top:150px;}
@@ -47,11 +48,33 @@ animation: jump 450ms;
   position: relative;
   top: 560px;
   left: 1300px;
-  animation: block 3s infinite linear;
+  animation: block 3s 3 linear;
 }
 @keyframes block {
   0% {left:1300px;}
   100% {left:-40px;}
+  
+}
+
+#goldBlock{
+  width: 90px;
+  height: 10px;
+  background-color: gold;
+  position: sticky;
+  top:650px;
+  left: 1800px;
+  right: 1800px;
+  bottom: 650px;
+  border-radius: 50%;
+  animation: block 1s 9 linear;
+  animation-direction: alternate-reverse;
+  animation: composition 3px;
+
+}
+@keyframes goldBlock {
+  0% {left:1300px;}
+  100% {left:-40px;}
+  
   
 }
 
@@ -69,3 +92,14 @@ color: red;
 
 }
 
+#start{
+  height: 40px;
+  width: 80px;
+  font-size: larger;
+  font-weight: bolder;
+  color:green;
+  position:relative;
+  left: 1000px;
+  top:-200px;
+
+}
