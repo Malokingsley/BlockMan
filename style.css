@@ -99,7 +99,8 @@ color: red;
   font-weight: bolder;
   color:green;
   position:relative;
-  left: 1000px;
-  top:-200px;
+  left: 400px;
+  top: -170px;
+  right: 100px;
 
 }

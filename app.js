@@ -79,8 +79,7 @@ let checkDead = setInterval(function() {
     let goldBlockTop = 
     parseInt(window.getComputedStyle(goldBlock).getPropertyValue('top'));
 
-     
-    if ( goldBlockBottom == 650 && goldBlockLeft == 227 && goldBlockRight == 1800 && goldBlockTop == 650 && blockManTop == 100 && blockManBottom == 120 && blockManRight == goldBlockLeft == 1800 ){
+    if ( goldBlockBottom >= 650 && goldBlockLeft <= 227 && goldBlockRight <= 1800 && goldBlockTop >= 650 && blockManTop == 100 || blockManBottom == 120 && blockManLeft != goldBlockLeft && goldBlockRight <= 575 && blockManTop <= 575 ){
         // if the block.x is less then blockman.right??
         //console.log(goldBlockLeft, goldBlockRight,"top"+ blockManTop, "bottom" + blockManBottom);
         console.log(blockManLeft,blockManRight,blockManTop,blockManBottom);
