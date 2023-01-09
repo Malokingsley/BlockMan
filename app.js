@@ -85,7 +85,7 @@ let checkDead = setInterval(function() {
         console.log(blockManLeft,blockManRight,blockManTop,blockManBottom);
         hitSound.play();
         
-        alert ("you lose goldblock")
+        alert ("you lose ")
     }
 // tring to animate in order
     function goldBlockMoves(){
